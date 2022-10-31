@@ -1,0 +1,38 @@
+<%- include('../partials/header') %>
+
+<h3>Enter a New Plant</h3>
+<form action="/plants" method="POST">
+  <label>Name:
+    <input type="text" name="name">
+  </label><br>
+
+  <label>Variety:
+    <select name="variety">
+        <option value="Herb">Herb</option>
+        <option value="Shrub">Shrub</option>
+        <option value="Tree">Tree</option>
+        <option value="Succulent">Succulent</option>
+        <option value="Climber">Climber</option>
+        <option value="Creeper">Creeper</option>
+      </select>
+  </label><br>
+
+  <label>Area:
+    <select name="area">
+      <option value="Indoor">Indoor</option>
+      <option value="Outdoor">Outdoor</option>
+    </select>
+  </label><br>
+
+  <label>Cycle:
+    <select name="cycle">
+      <option value="Annual">Annual</option>
+      <option value="Perennial">Perennial</option>
+      <option value="Biennial">Biennial</option>
+    </select>
+  </label><br>
+<button type="submit">Add Plant</button>
+</form>
+
+
+<%- include('../partials/footer') %>

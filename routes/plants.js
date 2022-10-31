@@ -1,6 +1,13 @@
-const express = require('express');
-const router = express.Router();
-const plantsCtrl = require('../controllers/plants');
-const ensureLoggedIn = require('../config/ensureLoggedIn');
+var express = require('express');
+var router = express.Router();
+var plantsCtrl = require('../controllers/plants');
+var ensureLoggedIn = require('../config/ensureLoggedIn');
+
 
 router.get('/', plantsCtrl.index);
+router.get('/new', plantsCtrl.new);
+
+module.exports = router;
+
+
+

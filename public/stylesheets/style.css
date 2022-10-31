@@ -19,5 +19,32 @@ h2 {
   position: absolute;
   top: 10%;
   left: 35%;
+  
+}
+h3 {
+  font-family: 'Island Moments', cursive;
+  font-size: 50px;
+  color: saddlebrown;
+  display: flex;
+  text-align: center;
+  left: 20%;
   position: relative;
+}
+
+label {
+  font-family: 'Poor Story', cursive;
+  color: whitesmoke;
+  font-size: 25px;
+  display: flex;
+  position:relative;
+  text-align: center;
+  left: 20%;
+}
+
+button {
+  font-family: 'Poor Story', cursive;
+  display: flex;
+  position:relative;
+  text-align: center;
+  left: 20%;
 }
