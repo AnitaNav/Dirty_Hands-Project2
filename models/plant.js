@@ -3,19 +3,23 @@ const Schema = mongoose.Schema;
 
 const plantSchema = new Schema({
     name: {
-        type: String
+        type: String,
+        required: true
     },
     variety: {
         type: String,
-        enum: ['Herb', 'Shrub','Tree','Succulent','Climber','Creeper']
+        enum: ['Herb', 'Shrub','Tree','Succulent','Climber','Creeper'],
+        required: true
     },
     area: {
         type: String,
-        enum: ['Indoor','Outdoor']
+        enum: ['Indoor','Outdoor'],
+        required: true
     },
     cycle: {
         type: String,
-        enum: ['Annual','Perennial', 'Biennial']
+        enum: ['Annual','Perennial', 'Biennial'],
+        required: true
     },
 
 }, {
