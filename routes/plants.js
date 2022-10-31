@@ -6,6 +6,7 @@ var ensureLoggedIn = require('../config/ensureLoggedIn');
 
 router.get('/', plantsCtrl.index);
 router.get('/new', plantsCtrl.new);
+router.post('/', plantsCtrl.create);
 
 module.exports = router;
 
