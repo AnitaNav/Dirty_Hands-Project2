@@ -1,0 +1,27 @@
+<%- include('../partials/header') %>
+
+<h3>Plants List</h3>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Variety</th>
+      <th>Area</th>
+      <th>Cycle</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% plants.forEach(function(p) { %>
+      <tr>
+        <td><%= p.name %></td>
+        <td><%= p.variety %></td>
+        <td><%= p.area %></td>
+        <td><%= p.cycle %></td>
+      </tr>
+    <% }); %>
+  </tbody>
+</table>
+
+
+
+<%- include('../partials/footer') %>

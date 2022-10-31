@@ -48,3 +48,13 @@ button {
   text-align: center;
   left: 20%;
 }
+
+table {
+  font-family: 'Poor Story', cursive;
+  color: whitesmoke;
+  font-size: 25px;
+  display: grid;
+  position: absolute;
+  text-align: center;
+  left: 20%;
+}
