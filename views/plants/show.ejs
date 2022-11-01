@@ -1,4 +1,4 @@
-<% - include('../partials/header') %>
+<%- include('../partials/header') %>
 <section id="show-page">
     <div>Name: </div>
     <div><%= plant.name %></div>
@@ -19,7 +19,7 @@
     <input type="submit" value="🍃">
   </form>
 
-  <% if (plant.comments.length) { %>
+  <% if (plant.comments && plant.comments.length) { %>
     <table>
       <thead>
         <tr>
@@ -33,13 +33,28 @@
         <% plant.comments.forEach(function(c) { %>
           <tr>
             <td><%= c.createdAt.toLocaleDateString() %></td>
-            <td><%= c.comment %></td>
+            <td><%= c.content %></td>
+            <td>
+              <% if (user?._id.equals(c.user)) { %>
+                <form action="/comments/<%= c._id %>?_method=DELETE" method="POST">
+                  <button type="submit">🗑️</button>
+                </form>
+              <% } %>
+            </td>
           </tr>
         <% }); %>
+        <tr>
+          <td colspan="2"></td>
+          <td>
+            <strong>
+              <%= (plant.comments.length).toFixed(1) %>
+            </strong>
+          </td>
+        </tr>
       </tbody>
     </table>    
     <% } else { %>
       <h5>No Opines Yet</h5>
     <% } %>
 
-<% - include('../partials/footer') %>
+<%- include('../partials/footer') %>

@@ -6,6 +6,10 @@ const commentSchema = new Schema({
         type: String,
         required: true
     },
+    user: {
+        type: Schema.Types.ObjectId,
+        ref: 'User'
+    }
 }, {
     timestamps: true
 });
@@ -29,9 +33,9 @@ const plantSchema = new Schema({
         type: String,
         enum: ['Annual','Perennial', 'Biennial'],
         required: true,
-        comments: [commentSchema]
+        
     },
-
+    comments: [commentSchema]
 }, {
     timestamps: true
 });

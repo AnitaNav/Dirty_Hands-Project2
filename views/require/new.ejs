@@ -1,0 +1,17 @@
+<%- include('../partials/header') %>
+
+<section id="badge-container">
+</section>
+
+<form id="add-require-form" action="/plants/<%= plantId %>/requires" method="POST">
+  <label>Soil:</label>
+  <select name="soil">
+    <option value="Yes">YES</option>
+    <option value="No">NO</option>
+  <label>Fertilizer:</label>
+  <select name="fertilizer">
+    <option value="Yes">YES</option>
+    <option value="No">NO</option>
+</form>
+
+<%- include('../partials/footer') %>
