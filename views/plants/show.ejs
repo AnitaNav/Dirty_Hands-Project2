@@ -10,4 +10,36 @@
     <div><%= plant.cycle %></div>
   </section>
 
+  <br><br><h2>Opine:</h2>
+  <form id="add-comment-form" method="POST"
+    action="/plants/<%= plant._id %>/comments">
+    <label>Comment:</label>
+    <textarea name="content"></textarea>
+    </select>
+    <input type="submit" value="🍃">
+  </form>
+
+  <% if (plant.comments.length) { %>
+    <table>
+      <thead>
+        <tr>
+          <th>User</th>
+          <th>Date</th>
+          <th>Comment</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        <% plant.comments.forEach(function(c) { %>
+          <tr>
+            <td><%= c.createdAt.toLocaleDateString() %></td>
+            <td><%= c.comment %></td>
+          </tr>
+        <% }); %>
+      </tbody>
+    </table>    
+    <% } else { %>
+      <h5>No Opines Yet</h5>
+    <% } %>
+
 <% - include('../partials/footer') %>

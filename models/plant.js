@@ -1,6 +1,15 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
+const commentSchema = new Schema({
+    content: {
+        type: String,
+        required: true
+    },
+}, {
+    timestamps: true
+});
+
 const plantSchema = new Schema({
     name: {
         type: String,
@@ -19,7 +28,8 @@ const plantSchema = new Schema({
     cycle: {
         type: String,
         enum: ['Annual','Perennial', 'Biennial'],
-        required: true
+        required: true,
+        comments: [commentSchema]
     },
 
 }, {
