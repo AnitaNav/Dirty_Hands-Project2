@@ -9,8 +9,8 @@
 </head>
 <body>
   <nav>
-    <a href="/plants" <%- title === 'Dashboard' ? 'class="active"' : '' %>>Dashboard</a> |
     <% if (user) { %>
+      <a href="/plants" <%- title === 'Dashboard' ? 'class="active"' : '' %>>Dashboard</a> |
       <a href="/plants/new" <%- title === 'New Plants' ? 'class="active"' : '' %>>New Plants</a> |
       <a href="/logout">Log Out</a>
     <% } else { %>

@@ -5,7 +5,30 @@ module.exports = {
     show,
     new: newPlant,
     create,
+    update,
+    edit
 };
+
+function edit(req, res) {
+    Plant.findOne({_id: req.params.id}, function(err, plant) {
+      if (err || !plant) return res.redirect(`/plants/${req.params.id}`);
+      res.render('plants/edit', {plant, title:"edit plant"});
+    });
+  }
+
+function update(req, res) {
+    console.log(req.params.id);
+    Plant.findOneAndUpdate(
+      {_id: req.params.id, userId: req.user._id},
+      req.body,
+      {new: true},
+      function(err, plant) {
+        console.log(err);
+        if (err || !plant) return res.redirect('/plants');
+        res.redirect(`/plants/${plant._id}`);
+      }
+    );
+  }
 
 function index(req, res) {
     Plant.find({}, function(err, plants){
@@ -25,6 +48,8 @@ function newPlant(req, res) {
 }
 
 function create (req, res) {
+    req.body.userId = req.user._id;
+    req.body.userName = req.user.name;
     const plant = new Plant(req.body);
     plant.save(function(err) {
         if (err) return res.redirect('/plants/new');

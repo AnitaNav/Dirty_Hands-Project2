@@ -8,7 +8,16 @@
     <div><%= plant.area %></div>
     <div>Cycle: </div>
     <div><%= plant.cycle %></div>
+    <div>Soil: </div>
+    <div><%= plant.soil %></div>
+    <div>Water: </div>
+    <div><%= plant.water %></div>
+    <div>Fertilizer: </div>
+    <div><%= plant.fertilizer %></div>
   </section>
+<a href="/plants/<%= plant._id %>/edit">Edit Plant</a>
+
+</section>
 
   <br><br><h2>Opine:</h2>
   <form id="add-comment-form" method="POST"

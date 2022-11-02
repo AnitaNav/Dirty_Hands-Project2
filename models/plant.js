@@ -34,9 +34,34 @@ const plantSchema = new Schema({
         enum: ['Annual','Perennial', 'Biennial'],
         required: true,
         
+    }, 
+    soil: {
+        type: String,
+        enum: ['Yes', 'No'],
+        required: true,
+      },
+    
+      water: {
+        type: String,
+        enum: ['Regularly', 'Occassionally'],
+        required: true
+      },
+      
+      fertilizer: {
+        type: String,
+        enum: ['Yes', 'No'],
+        required: true
+      },
+      userId: {
+        type: Schema.Types.ObjectId,
+        ref: "User"
+      },
+      userName: {
+        type: String
+      },
+      comments: [commentSchema]
     },
-    comments: [commentSchema]
-}, {
+ {
     timestamps: true
 });
 module.exports = mongoose.model('Plant', plantSchema);

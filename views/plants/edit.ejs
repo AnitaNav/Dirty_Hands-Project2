@@ -1,9 +1,9 @@
 <%- include('../partials/header') %>
 
 <h3>Enter a New Plant</h3>
-<form action="/plants" method="POST">
+<form action="/plants/<%= plant._id %>?_method=PUT" method="POST">
   <label>Name:
-    <input type="text" name="name">
+    <input type="text" value="<%= plant.name %>"name="name">
   </label><br>
 
   <label>Variety:
@@ -52,8 +52,7 @@
       <option value="No">No</option>
     </select>
   </label><br>
-
-<button type="submit">Add Plant 🪴</button>
+<button type="edit">Edit Plant 🪴</button>
 </form>
 
 

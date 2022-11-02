@@ -27,6 +27,7 @@ function create(req, res) {
     Plant.findById(req.params.id, function(err, plant) {
         plant.comments.push(req.body);
     plant.save(function(err) {
+      console.log(err);
         res.redirect(`/plants/${plant._id}`);
     });
   });
