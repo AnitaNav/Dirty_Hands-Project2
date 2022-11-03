@@ -49,7 +49,7 @@ const plantSchema = new Schema({
     
       water: {
         type: String,
-        enum: ['Regularly', 'Occassionally'],
+        enum: ['Regularly', 'Occasionally'],
         required: true
       },
       
