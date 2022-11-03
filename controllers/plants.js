@@ -17,13 +17,11 @@ function edit(req, res) {
   }
 
 function update(req, res) {
-    console.log(req.params.id);
     Plant.findOneAndUpdate(
       {_id: req.params.id, userId: req.user._id},
       req.body,
       {new: true},
       function(err, plant) {
-        console.log(err);
         if (err || !plant) return res.redirect('/plants');
         res.redirect(`/plants/${plant._id}`);
       }

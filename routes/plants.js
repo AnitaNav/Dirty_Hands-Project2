@@ -4,12 +4,12 @@ var plantsCtrl = require('../controllers/plants');
 var ensureLoggedIn = require('../config/ensureLoggedIn');
 
 
-router.get('/', plantsCtrl.index);
+router.get('/', ensureLoggedIn, plantsCtrl.index);
 router.get('/new', ensureLoggedIn, plantsCtrl.new);
 router.get('/:id', ensureLoggedIn, plantsCtrl.show);
 router.post('/', ensureLoggedIn, plantsCtrl.create);
-router.get('/:id/edit', plantsCtrl.edit);
-router.put('/:id', plantsCtrl.update);
+router.get('/:id/edit', ensureLoggedIn, plantsCtrl.edit);
+router.put('/:id', ensureLoggedIn, plantsCtrl.update);
 
 
 module.exports = router;
