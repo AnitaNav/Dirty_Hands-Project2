@@ -13,14 +13,19 @@ a {
 h2 {
   font-family: 'Island Moments', cursive;
   font-size: 50px;
-  color: bisque;
+  color: beige;
   text-align: center;
 }
-
+p {
+  font-family: 'Island Moments', cursive;
+  font-size: 45px;
+  color: beige;
+  text-align: center;
+}
 h3 {
   font-family: 'Island Moments', cursive;
   font-size: 50px;
-  color: bisque;
+  color: beige;
   text-align: center;
 }
 
