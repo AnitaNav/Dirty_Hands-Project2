@@ -1,7 +1,7 @@
 <%- include('../partials/header') %>
 
 <h3>Enter a New Plant</h3>
-<form action="/plants/<%= plant._id %>?_method=PUT" method="POST">
+<form id="edit-form" action="/plants/<%= plant._id %>?_method=PUT" method="POST">
   <label>Name:
     <input type="text" value="<%= plant.name %>"name="name">
   </label><br>
