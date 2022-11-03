@@ -44,10 +44,14 @@ table thead th, td {
 }
 
 
-#show-page, div {
+#show-page {
+ display: grid;
+ grid-template-columns: repeat(2, 1fr);
+ width: 30vw;
   font-family: 'Poor Story', cursive;
   color: whitesmoke;
   font-size: 20px;
+  margin-bottom: 5vh;
 }
 #add-new-form {
   display: flex;

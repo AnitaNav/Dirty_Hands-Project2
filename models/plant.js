@@ -9,6 +9,12 @@ const commentSchema = new Schema({
     user: {
         type: Schema.Types.ObjectId,
         ref: 'User'
+    },
+    userName: {
+      type: String,
+    },
+    userAvatar: {
+      type: String
     }
 }, {
     timestamps: true
