@@ -14,3 +14,5 @@ for the collection of plants. The application let's you create, edit, update and
 # Next Steps
 * Include an about page.
 * Apply CRUD to all components.
+* Use other authentication like facebook/instagram to login
+
