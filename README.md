@@ -15,4 +15,4 @@ for the collection of plants. The application let's you create, edit, update and
 * Include an about page.
 * Apply CRUD to all components.
 * Use other authentication like facebook/instagram to login
-
+* Responsive web design
