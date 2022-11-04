@@ -11,6 +11,7 @@ for the collection of plants. The application let's you create, edit, update and
 * MongoDB
 # To view
 [Web Link](https://garden-app-2017.herokuapp.com/)
+[Trello](https://trello.com/b/zNi5AKi4/dirtyhandsgardenapp)
 # Next Steps
 * Include an about page.
 * Apply CRUD to all components.
